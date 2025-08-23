@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Punto de montaje
+MOUNT_POINT="/mnt"
+COMPOSE_PATH="$MOUNT_POINT/minecraft/docker-compose.yml"
+
+echo "Montando servidor..."
+
+# Verificar si existe el archivo docker-compose.yml
+if [ ! -f "$COMPOSE_PATH" ]; then
+  echo "No se encontró $COMPOSE_PATH"
+  exit 1
+fi
+
+# Moverse al directorio donde está el docker-compose.yml
+cd "$(dirname "$COMPOSE_PATH")" || {
+  echo " No se pudo acceder al directorio"
+  exit 1
+}
+
+# Levantar el servidor en segundo plano
+docker compose up -d
+
+# Confirmar
+if [ $? -eq 0 ]; then
+  echo " Servidor montado y ejecutándose"
+else
+  echo " Error al iniciar el servidor"
+fi
