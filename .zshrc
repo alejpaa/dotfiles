@@ -56,6 +56,12 @@ export PATH="$PATH:/home/alem/.scripts"
 alias zed='flatpak run dev.zed.Zed'
 alias dots='/usr/bin/git --work-tree=$HOME --git-dir=$HOME/.dotfiles'
 alias docker='export UID GID; docker'
+alias rm='trash -v'
+alias vi='nvim'
+alias svi='sudo vi'
+
+# Remove a directory and all files
+alias rmd='/bin/rm  --recursive --force --verbose '
 
 # Check if ripgrep is installed
 if command -v rg &> /dev/null; then
