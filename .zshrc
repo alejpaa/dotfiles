@@ -55,7 +55,6 @@ export PATH="$PATH:/home/alem/.scripts"
 # alias
 alias zed='flatpak run dev.zed.Zed'
 alias dots='/usr/bin/git --work-tree=$HOME --git-dir=$HOME/.dotfiles'
-alias docker='export UID GID; docker'
 alias rm='trash -v'
 alias vi='nvim'
 alias svi='sudo vi'

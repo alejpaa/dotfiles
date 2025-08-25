@@ -1,7 +1,11 @@
 #!/bin/bash
 
+# UID y GID actuales
+export UID=$(id -u)
+export GID=$(id -g)
+
 # Punto de montaje
-MOUNT_POINT="/mnt"
+MOUNT_POINT="/mnt/disco"
 COMPOSE_PATH="$MOUNT_POINT/minecraft/docker-compose.yml"
 
 echo "Montando servidor..."
