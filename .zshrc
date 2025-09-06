@@ -51,6 +51,8 @@ export PATH=$PATH:/usr/local/go/bin
 
 export PATH="$PATH:$HOME/go/bin"
 export PATH="$PATH:/home/alem/.scripts"
+export PATH=$PATH:/usr/bin
+export PATH="$PATH:$HOME/.local/bin"
 
 # alias
 alias zed='flatpak run dev.zed.Zed'
@@ -58,7 +60,7 @@ alias dots='/usr/bin/git --work-tree=$HOME --git-dir=$HOME/.dotfiles'
 alias rm='trash -v'
 alias vi='nvim'
 alias svi='sudo vi'
-
+alias cat='bat'
 # Remove a directory and all files
 alias rmd='/bin/rm  --recursive --force --verbose '
 
@@ -72,7 +74,7 @@ fi
 alias diskspace="du -S | sort -n -r |more"
 alias folders='du -h --max-depth=1'
 alias folderssort='find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn'
-alias tree='tree -CAhF --dirsfirst'
+#alias tree='tree -CAhF --dirsfirst'
 alias treed='tree -CAFd'
 alias mountedinfo='df -hT'
 
