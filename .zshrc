@@ -112,3 +112,7 @@ function whatsmyip () {
 eval "$(starship init zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
